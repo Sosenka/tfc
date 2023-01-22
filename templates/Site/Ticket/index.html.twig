@@ -1,0 +1,31 @@
+{% extends 'Site/base.html.twig' %}
+
+{% block content %}
+<h1>Lista zgłoszeń</h1>
+
+    {% if tickets is not empty %}
+
+    <table class="table" style="color: white;">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Numer zgłoszenia</th>
+            <th scope="col">Tytuł</th>
+            <th scope="col">Status</th>
+            <th scope="col">Data utworzenia</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for ticket in tickets %}
+        <tr>
+            <th scope="row">{{ loop.index }}</th>
+            <td>{{ ticket.ticketNumber }}</td>
+            <td>{{ ticket.topic }}</td>
+            <td>{{ ticket.status }}</td>
+            <td>{{ ticket.getCreated|date('Y-m-d H:i:s') }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+{% endblock %}
