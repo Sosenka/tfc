@@ -17,20 +17,8 @@ services:
         resource: '../src/'
         exclude:
             - '../src/DependencyInjection/'
+            - '../src/Entity/'
             - '../src/Kernel.php'
 
-    App\Core\:
-        resource: '../src/Core/*'
-        exclude:
-            - '../src/DependencyInjection/'
-
-    App\Ticket\:
-        resource: '../src/Ticket/*'
-        exclude:
-            - '../src/DependencyInjection/'
-
-    App\Dashboard\:
-        resource: '../src/Dashboard/*'
-        exclude:
-            - '../src/Admin/'
-
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones

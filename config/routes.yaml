@@ -1,15 +1,3 @@
-app_core:
-    resource: '../src/Core/Controller/'
-    type: annotation
-
-app_ticket:
-    resource: '../src/Ticket/Controller/'
-    type: annotation
-
-app_core_security:
-    resource: '../src/Core/Security/'
-    type: annotation
-
-admin_dashboard:
-    resource: '../src/Dashboard/Controller/'
-    type: annotation
+controllers:
+    resource: ../src/Controller/
+    type: attribute
